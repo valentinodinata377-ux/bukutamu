@@ -1,0 +1,113 @@
+:root {
+    --bg: #f3f5f9;
+    --card: #ffffff;
+    --teks: #1d2433;
+    --redup: #667085;
+    --garis: #dfe3ec;
+    --utama: #1f4fd8;
+    --utama-gelap: #173ba3;
+    --bahaya: #c0392b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--teks);
+    line-height: 1.5;
+}
+
+h1, h2 { margin: 0 0 .5rem; }
+
+label { display: block; margin: 1rem 0 .3rem; font-weight: 600; }
+
+input, textarea {
+    width: 100%;
+    padding: .65rem .8rem;
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    font: inherit;
+}
+input:focus, textarea:focus, button:focus-visible, a:focus-visible {
+    outline: 2px solid var(--utama);
+    outline-offset: 1px;
+}
+
+button {
+    margin-top: 1.2rem;
+    padding: .65rem 1.2rem;
+    background: var(--utama);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover { background: var(--utama-gelap); }
+
+.alert {
+    background: #fff4e5;
+    border: 1px solid #f0c78a;
+    padding: .7rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* login */
+.halaman-login {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+.kotak-login {
+    width: 100%;
+    max-width: 380px;
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--garis);
+}
+.kotak-login button { width: 100%; }
+.sub { color: var(--redup); margin-top: 0; }
+
+/* dashboard */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--utama);
+    color: #fff;
+}
+.topbar h1 { font-size: 1.3rem; margin: 0; }
+.tombol-keluar {
+    margin-left: .8rem;
+    padding: .35rem .8rem;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+}
+.tombol-keluar:hover { background: rgba(255,255,255,.15); }
+
+.isi { max-width: 960px; margin: 1.5rem auto; padding: 0 1rem; }
+
+.panel {
+    background: var(--card);
+    border: 1px solid var(--garis);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tabel-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .65rem .8rem; border-bottom: 1px solid var(--garis); text-align: left; vertical-align: top; }
+th { background: #f7f8fb; }
+.hapus { color: var(--bahaya); text-decoration: none; font-weight: 600; }
+.hapus:hover { text-decoration: underline; }
+.kosong { color: var(--redup); }
